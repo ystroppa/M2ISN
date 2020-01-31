@@ -1,0 +1,151 @@
+	public static void main(String[] args) {
+
+		// Listes de stockage des différents données 
+		ArrayList<Chercheur> Liste_chercheurs= new ArrayList<>();	
+		ArrayList<Editeur> Liste_editeurs= new ArrayList<>();
+		ArrayList<Communication> Liste_communication= new ArrayList<>();
+		
+		// programme d'utilisation de vos classes 
+		// Première action saisie des chercheurs 	
+		Chercheur chercheur1= new Chercheur
+				("Charroux","Benoit","benoit.charroux@gmail.com","M", Statuts.MCF);
+		Chercheur chercheur2= new Chercheur
+				("Wicker","Nicolas","nicolas.wicker@gmail.com","M", Statuts.PR);			
+		Chercheur chercheur3= new Chercheur
+				("Debarsy","Nicolas","nicolas.debarsy@gmail.com","M", Statuts.CR);
+
+		Liste_chercheurs.add(chercheur1);	
+		Liste_chercheurs.add(chercheur2);
+		Liste_chercheurs.add(chercheur3);
+
+		// affichage liste des chercheurs 
+		Liste_chercheurs.forEach((Chercheur value) -> System.out.println(value));
+		
+		// Premier test chercheur, on ajoute un chercheur dans la liste si il n'existe pas		
+		Chercheur chercheur4= new Chercheur
+				("Wicker","Nicolas","nicolas.wicker@gmail.com","M", Statuts.PR);
+		if (!Liste_chercheurs.contains(chercheur4))
+			Liste_chercheurs.add(chercheur4);
+		System.out.println("On doit avoir la mem liste de chercheur");
+		// on doit avoir le même affichage qu'au dessus 
+		Liste_chercheurs.forEach((Chercheur value) -> System.out.println(value));
+
+		// ------------------------------------
+		// Deuxième etape on passe aux editeurs 		
+		// ------------------------------------
+		Editeur editeur1= new Editeur("ELSEVIER");
+		Editeur editeur2= new Editeur("HAL");
+		Editeur editeur3= new Editeur("arXiv");
+		
+		// ajout dans la liste globale 
+		Liste_editeurs.add(editeur1);
+		Liste_editeurs.add(editeur2);
+		Liste_editeurs.add(editeur3);
+		
+		Liste_editeurs.forEach((Editeur value) -> System.out.println(value));
+		// on fera la même que les chercheurs pour eviter les doublons possibles dans la liste
+
+		Article article1;
+		Article article2;
+		
+		// Saisie des productions pour un chercheur 
+		chercheur1.getArticles().add(article1= new Article("titre_1","abstract de l'article 1", chercheur1,2016));
+		chercheur1.getArticles().add(article2=new Article("titre_2","abstract de l'article 2", chercheur1,2016));
+		chercheur1.getArticles().add(new Article("titre_3","abstract de l'article 3", chercheur1,2017));
+		chercheur1.getArticles().add(new Article("titre_4","abstract de l'article 4", chercheur1,2017));
+		chercheur1.getArticles().add(new Article("titre_5","abstract de l'article 5", chercheur1,2018));
+		
+		System.out.println("Liste des articles du chercheur: "+ chercheur1.getNom());
+		chercheur1.getArticles().forEach((Article value) -> System.out.println(value));
+		
+		// verifications des controles et des levees d'exception 
+		try {
+			article1.affectation_auteur(chercheur2);
+			article1.affectation_auteur(chercheur1);
+		} catch (Except_Chercheur_existant e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("Liste des articles du chercheur: "+ chercheur2.getNom());
+		chercheur2.getArticles().forEach((Article value) -> System.out.println(value));
+		
+		
+		// modification des type de production 
+		article1.setEditor(editeur1);
+		article2.setEditor(editeur1);		
+		try {
+			article1.setType(Type_production.Publication);
+		} catch (Except_Editeur_Manquant e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			article2.setType(Type_production.Publication);
+		} catch (Except_Editeur_Manquant e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+				
+		// saisie des informations concernant les presentations seminaires et autres 
+		
+		// Declaration et Affectation pour le chercheur 1
+		Communication C1 = new Communication("Conférence I2M","Paris",2018, Type_communication.Conference,chercheur1);
+		C1.setPays("Norvège");
+		Liste_communication.add(C1);
+		Communication C2 = new Communication("Conférence I3M","Paris",2018, Type_communication.Conference,chercheur1);
+		C2.setPays("Finlande");
+		Liste_communication.add(C2);
+
+		// Deux chercheurs ont participe a cette conference C1
+		chercheur2.affecte_communication(C1);
+		
+		// petit test: si on essaye d'affecter une deuxième fois le chercheur 
+		chercheur2.affecte_communication(C1);
+		
+		// autre test : tj avec la meme conference mais stockee dans une autre variable
+		Communication C3 = new Communication("Conférence I2M","Paris",2018, Type_communication.Conference,chercheur1);		
+		C3.setPays("Japon");
+		Communication C4 = new Communication("Conférence I2M","Paris",2019, Type_communication.Conference,chercheur2);
+		C4.setPays("Angleterre");
+		if (!Liste_communication.contains(C1))
+			Liste_communication.add(C1);
+		if (!Liste_communication.contains(C2))
+			Liste_communication.add(C2);
+		if (!Liste_communication.contains(C3))
+			Liste_communication.add(C3);
+		if (!Liste_communication.contains(C4))
+			Liste_communication.add(C4);
+		
+		// affichage des communications 
+		Liste_communication.forEach((Communication C) -> {
+				System.out.println(C);
+		});
+		
+		Communication C5 = new Communication("Workshop WVF","Paris",2019, Type_communication.Workshop,chercheur2);
+		
+		
+		// ----------------------------------------------------------
+		// on parcourt l'ensemble des chercheurs de notre structure 
+		// ----------------------------------------------------------
+		Liste_chercheurs.forEach((Chercheur C)-> {	
+			// extraction des donnees selon criteres pour verification par chercheur  
+			// liste des articles
+			System.out.println("-------------------------------");
+			System.out.println(C.getNom());
+			System.out.println(C.Edition(2016,2020));
+			System.out.println("-------------------------------");
+		});
+		
+		
+		// liste des chercheurs qui ont participe  a la conference de 2019
+		System.out.println("Conference de " + C4.getTitre() + "  " + C4.getAnnee());
+		C4.getListe_chercheurs().forEach((Chercheur C) -> {
+			System.out.println("-------------------------------");
+			System.out.println("\t" + C.getNom()+"\t"+C.getPrenom());
+			System.out.println("-------------------------------");
+			
+		});		
+		// sauvegarde de l'ensemble des chercheurs et de leurs liens
+		Utilitaires.save(Liste_chercheurs);
+	}
