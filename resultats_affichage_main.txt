@@ -1,0 +1,124 @@
+Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]
+Chercheur [Nom=Wicker, Prenom=Nicolas, Email=nicolas.wicker@gmail.com, Sexe=M, Statut=PR]
+Chercheur [Nom=Debarsy, Prenom=Nicolas, Email=nicolas.debarsy@gmail.com, Sexe=M, Statut=CR]
+On doit avoir la mem liste de chercheur
+Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]
+Chercheur [Nom=Wicker, Prenom=Nicolas, Email=nicolas.wicker@gmail.com, Sexe=M, Statut=PR]
+Chercheur [Nom=Debarsy, Prenom=Nicolas, Email=nicolas.debarsy@gmail.com, Sexe=M, Statut=CR]
+Editeur [Nom=ELSEVIER]
+Editeur [Nom=HAL]
+Editeur [Nom=arXiv]
+Liste des articles du chercheur: Charroux
+Article [Titre=titre_1, Identification=125485468955, Date=2016, Abstract=abstract de l'article 1, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]]
+Article [Titre=titre_2, Identification=125485468956, Date=2016, Abstract=abstract de l'article 2, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]]
+Article [Titre=titre_3, Identification=125485468957, Date=2017, Abstract=abstract de l'article 3, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]]
+Article [Titre=titre_4, Identification=125485468958, Date=2017, Abstract=abstract de l'article 4, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]]
+Article [Titre=titre_5, Identification=125485468959, Date=2018, Abstract=abstract de l'article 5, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]]
+Warning :: Chercheur Existant: Charroux
+Liste des articles du chercheur: Wicker
+Article [Titre=titre_1, Identification=125485468955, Date=2016, Abstract=abstract de l'article 1, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF], Chercheur [Nom=Wicker, Prenom=Nicolas, Email=nicolas.wicker@gmail.com, Sexe=M, Statut=PR]]]
+Communication [Titre=Conférence I2M, Ville=Paris, Annee=2018, Descriptif=, Periode=, Type=Conference, Liste_chercheurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]]
+Communication [Titre=Conférence I3M, Ville=Paris, Annee=2018, Descriptif=, Periode=, Type=Conference, Liste_chercheurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]]
+Communication [Titre=Conférence I2M, Ville=Paris, Annee=2019, Descriptif=, Periode=, Type=Conference, Liste_chercheurs=[Chercheur [Nom=Wicker, Prenom=Nicolas, Email=nicolas.wicker@gmail.com, Sexe=M, Statut=PR]]]
+-------------------------------
+Charroux
+ANNEE :2016
+Publications:  
+	Article [Titre=titre_1, Identification=125485468955, Date=2016, Abstract=abstract de l'article 1, Code Revue: ELSEVIER-5487542158, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF], Chercheur [Nom=Wicker, Prenom=Nicolas, Email=nicolas.wicker@gmail.com, Sexe=M, Statut=PR]]] 
+	Article [Titre=titre_2, Identification=125485468956, Date=2016, Abstract=abstract de l'article 2, Code Revue: ELSEVIER-5487542159, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]] 
+WorkingPaper:  
+Presentations Conferences:  
+Presentations Workshops:  
+Presentations Seminaires:  
+ANNEE :2017
+Publications:  
+WorkingPaper:  
+	Article [Titre=titre_3, Identification=125485468957, Date=2017, Abstract=abstract de l'article 3, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]]
+	Article [Titre=titre_4, Identification=125485468958, Date=2017, Abstract=abstract de l'article 4, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]]
+Presentations Conferences:  
+Presentations Workshops:  
+Presentations Seminaires:  
+ANNEE :2018
+Publications:  
+WorkingPaper:  
+	Article [Titre=titre_5, Identification=125485468959, Date=2018, Abstract=abstract de l'article 5, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF]]]
+Presentations Conferences:  
+	Norvège--Conférence I2M--2018--
+	Finlande--Conférence I3M--2018--
+Presentations Workshops:  
+Presentations Seminaires:  
+ANNEE :2019
+Publications:  
+WorkingPaper:  
+Presentations Conferences:  
+Presentations Workshops:  
+Presentations Seminaires:  
+
+-------------------------------
+-------------------------------
+Wicker
+ANNEE :2016
+Publications:  
+	Article [Titre=titre_1, Identification=125485468955, Date=2016, Abstract=abstract de l'article 1, Code Revue: ELSEVIER-5487542158, Auteurs=[Chercheur [Nom=Charroux, Prenom=Benoit, Email=benoit.charroux@gmail.com, Sexe=M, Statut=MCF], Chercheur [Nom=Wicker, Prenom=Nicolas, Email=nicolas.wicker@gmail.com, Sexe=M, Statut=PR]]] 
+WorkingPaper:  
+Presentations Conferences:  
+Presentations Workshops:  
+Presentations Seminaires:  
+ANNEE :2017
+Publications:  
+WorkingPaper:  
+Presentations Conferences:  
+Presentations Workshops:  
+Presentations Seminaires:  
+ANNEE :2018
+Publications:  
+WorkingPaper:  
+Presentations Conferences:  
+	Norvège--Conférence I2M--2018--
+Presentations Workshops:  
+Presentations Seminaires:  
+ANNEE :2019
+Publications:  
+WorkingPaper:  
+Presentations Conferences:  
+	Angleterre--Conférence I2M--2019--
+Presentations Workshops:  
+	Workshop WVF--2019--
+Presentations Seminaires:  
+
+-------------------------------
+-------------------------------
+Debarsy
+ANNEE :2016
+Publications:  
+WorkingPaper:  
+Presentations Conferences:  
+Presentations Workshops:  
+Presentations Seminaires:  
+ANNEE :2017
+Publications:  
+WorkingPaper:  
+Presentations Conferences:  
+Presentations Workshops:  
+Presentations Seminaires:  
+ANNEE :2018
+Publications:  
+WorkingPaper:  
+Presentations Conferences:  
+Presentations Workshops:  
+Presentations Seminaires:  
+ANNEE :2019
+Publications:  
+WorkingPaper:  
+Presentations Conferences:  
+Presentations Workshops:  
+Presentations Seminaires:  
+
+-------------------------------
+Conference de Conférence I2M  2019
+-------------------------------
+	Wicker	Nicolas
+-------------------------------
+
+Sauvegarde effectuée dans le fichier sauve.dat
+
